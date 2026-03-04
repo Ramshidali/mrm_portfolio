@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGlobal Solutions | Circular Economy Management</title>
+    <style>
+        /* --- International Professional Styling with Green Touch --- */
+        :root {
+            --primary-green: #14532d; /* Deep Emerald Green */
+            --accent-green: #22c55e;  /* Bright Eco Green */
+            --dark-gray: #1f2937;    /* Charcoal Gray */
+            --light-gray: #f3f4f6;   /* Light Background */
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-light: #6b7280;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--white);
+        }
+
+        h2 { 
+            font-size: 2.8rem; 
+            color: var(--dark-gray); 
+            margin-bottom: 1.5rem; 
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        p { color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.1rem; }
+
+        section { padding: 100px 8%; }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--accent-green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .btn:hover { background-color: var(--primary-green); transform: translateY(-2px); }
+
+        /* --- Header --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green); }
+        .logo span { color: var(--accent-green); }
+        .nav-links { list-style: none; display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--dark-gray); font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--accent-green); }
+
+        /* --- Banner --- */
+        .banner {
+            background: linear-gradient(rgba(20, 83, 45, 0.85), rgba(20, 83, 45, 0.95)), 
+                        url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1600') center/cover no-repeat;
+            color: white;
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .banner h1 { font-size: 4rem; margin-bottom: 20px; font-weight: 800; line-height: 1.1; }
+        .banner p { color: white; font-size: 1.5rem; max-width: 800px; font-weight: 300; }
+
+        /* --- What We Do --- */
+        .what-we-do { background-color: var(--white); text-align: center; }
+        .what-we-do p { max-width: 900px; margin: 0 auto; color: var(--text-dark); }
+
+        /* --- Services --- */
+        .services { background-color: var(--light-gray); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--light-gray);
+        }
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--accent-green); }
+        .card h3 { color: var(--primary-green); margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* --- Strengths --- */
+        .strengths { background-color: var(--white); text-align: center; }
+        .strengths-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 60px; }
+        .strength-item { flex: 1; min-width: 280px; padding: 40px; border-radius: 4px; background: var(--light-gray); border: 1px solid #e5e7eb; }
+        .strength-item h4 { color: var(--primary-green); }
+
+        /* --- Mission & Vision --- */
+        .mission-vision { background-color: var(--dark-gray); color: var(--white); text-align: center; }
+        .mission-vision h2 { color: var(--white); }
+        .mv-container { display: flex; gap: 50px; margin-top: 60px; text-align: left; }
+        .mv-box { flex: 1; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 4px; border-left: 3px solid var(--accent-green); }
+        .mv-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent-green); }
+        .mv-box p { color: #d1d5db; }
+
+        /* --- Clients --- */
+        .clients { background-color: var(--white); text-align: center; }
+        .client-logos { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; margin-top: 60px; opacity: 0.8; }
+        .client-logo { font-size: 1.3rem; font-weight: 700; color: var(--dark-gray); padding: 20px; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #e5e7eb; border-radius: 4px;}
+
+        /* --- Values & Approach --- */
+        .values { background-color: var(--light-gray); text-align: center;}
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 60px; text-align: left;}
+        .value-card { background: var(--white); padding: 30px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .value-card h4 { color: var(--primary-green); }
+
+        /* --- Testimonials --- */
+        .testimonials { background-color: var(--white); text-align: center; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 60px;}
+        .testimonial-card { background: var(--light-gray); padding: 40px; border-radius: 4px; text-align: left; position: relative;}
+        .testimonial-card p { font-style: italic; font-size: 1.1rem; color: var(--text-dark); }
+        .testimonial-card strong { color: var(--primary-green); }
+
+        /* --- Enquiry --- */
+        .enquiry { background-color: var(--primary-green); color: var(--white); text-align: center; }
+        .enquiry h2 { color: var(--white); }
+        .enquiry-form { max-width: 700px; margin: 60px auto 0; text-align: left; }
+        .enquiry-form input, .enquiry-form textarea { width: 100%; padding: 18px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #d1d5db; background: var(--white); color: var(--text-dark);}
+        .enquiry-form textarea { resize: none; }
+
+        /* --- Footer --- */
+        footer { background-color: var(--dark-gray); color: #9ca3af; padding: 60px 8%; text-align: center; font-size: 0.9rem;}
+        footer a { color: var(--accent-green); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ECO<span>GLOBAL</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <h1>Sustainable Waste Management</h1>
+        <p>End-to-end circular economy solutions for international MNCs, tech parks, and institutions.</p>
+        <a href="#enquiry" class="btn">Request Consultation</a>
+    </section>
+
+    <section id="what-we-do" class="what-we-do">
+        <h2>Global Impact, Local Responsibility</h2>
+        <p>We handle waste sustainably & responsibly for bulk generating organisations, helping them achieve zero waste to landfill status through innovative, compliant, and transparent processes.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Core Capabilities</h2>
+        <div class="grid">
+            <div class="card"><h3>Residential Solutions</h3><p>Comprehensive waste management for luxury communities.</p></div>
+            <div class="card"><h3>Corporate Management</h3><p>Tailored solutions for tech parks and business centers.</p></div>
+            <div class="card"><h3>Institutional Waste</h3><p>Compliant handling for hospitals and educational centers.</p></div>
+            <div class="card"><h3>E-Waste & Recycling</h3><p>Secure disposal and recycling of electronics and plastic.</p></div>
+        </div>
+    </section>
+
+    <section id="strengths" class="strengths">
+        <h2>Our Global Strength</h2>
+        <div class="strengths-grid">
+            <div class="strength-item"><h4>End-to-End Tracking</h4></div>
+            <div class="strength-item"><h4>Circular Economy Expertise</h4></div>
+            <div class="strength-item"><h4>Global Compliance Standards</h4></div>
+        </div>
+    </section>
+
+    <section id="mission-vision" class="mission-vision">
+        <h2>Our Driving Force</h2>
+        <div class="mv-container">
+            <div class="mv-box">
+                <h3>Our Mission</h3>
+                <p>To revolutionize waste management by converting waste into resources through advanced circular technology.</p>
+            </div>
+            <div class="mv-box">
+                <h3>Our Vision</h3>
+                <p>To lead the global transition toward a zero-waste future by empowering institutions to manage their environmental footprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="clients">
+        <h2>Trusted by Industry Leaders</h2>
+        <div class="client-logos">
+            <div class="client-logo">Global Tech Co</div>
+            <div class="client-logo">Intl Airport</div>
+            <div class="client-logo">Govt Alliance</div>
+        </div>
+    </section>
+
+    <section id="values" class="values">
+        <h2>Values & Approach</h2>
+        <p>We rethink, reduce, reuse, and recycle to ensure a sustainable footprint.</p>
+        <div class="values-grid">
+            <div class="value-card"><h4>Sustainability</h4><p>Environment first in every decision.</p></div>
+            <div class="value-card"><h4>Transparency</h4><p>Clear data tracking and reporting.</p></div>
+            <div class="value-card"><h4>Innovation</h4><p>Adopting advanced recycling tech.</p></div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Partners Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"EcoGlobal provided us with a seamless transition to zero-waste. Their expertise is unmatched."</p>
+                <strong>- Sustainability Director, Global Tech Corp</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"An exceptional partner in managing our complex institutional waste. Highly professional."</p>
+                <strong>- Facilities Manager, Intl Hospital Group</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="enquiry" class="enquiry">
+        <h2>Partner with Us</h2>
+        <p>Are you a bulk waste generator? Connect with us to ensure your brand becomes zero waste to landfill.</p>
+        <form class="enquiry-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Business Email" required>
+            <textarea rows="5" placeholder="Project Details"></textarea>
+            <button type="submit" class="btn">Connect Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EcoGlobal Solutions Inc. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
